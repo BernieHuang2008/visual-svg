@@ -1,6 +1,9 @@
 function showsvg(rawcode) {
     var svg = document.getElementById('svg');
 
+    // Remove all previous paths
+    svg.innerHTML = '';
+
     // Generate a new path
     var newPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
 
