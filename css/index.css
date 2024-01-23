@@ -55,8 +55,12 @@ td {
 }
 
 svg {
+    background-color: white;
+}
+
+#rightbar {
     position: fixed;
     right: 0;
     top: 0;
-    background-color: white;
+    max-width: 410px;
 }

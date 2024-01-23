@@ -9,12 +9,12 @@
 <body>
     <textarea id="pasteyourcode" onchange="search_path(this.value);this.remove()">Paste Your SVG Code Here</textarea>
     <div id="virtual"></div>
-    <div>
+    <div id="rightbar">
         <svg id="svg" viewBox="0 0 1024 1024" height="400" width="400" style="border: solid black 1px">
             <text x="50%" y="50%" text-anchor="middle" style="font-size: 20px;">Your SVG will be shown here</text>
         </svg>
+        <div id="explain"></div>
     </div>
-    <div id="explain"></div>
 </body>
 
 <script src="js/parse.js"></script>
