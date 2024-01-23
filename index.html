@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Visual 👀 SVG</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <textarea id="pasteyourcode" onchange="search_path(this.value);this.remove()"></textarea>
+    <div id="virtual"></div>
+    <div>
+        <svg id="svg" viewBox="0 0 1024 1024" height="400" width="400" style="border: solid black 1px"></svg>
+    </div>
+    <div id="explain"></div>
+</body>
+
+<script src="js/parse.js"></script>
+<script src="js/meanings_sheet.js"></script>
+<script src="js/details.js"></script>
+<script src="js/visualize.js"></script>
+<script src="js/run.js"></script>
+
+</html>
