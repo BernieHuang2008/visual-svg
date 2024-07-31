@@ -7,7 +7,14 @@
 </head>
 
 <body>
-    <textarea id="pasteyourcode" onchange="search_path(this.value);this.remove()">Paste Your SVG Code Here</textarea>
+    <div id="inputarea">
+        <textarea id="pasteyourcode">Paste Your SVG Code Here</textarea>
+        <button onclick="search_path(pasteyourcode.value);inputarea.remove()">svg tag</button>
+        <hr>
+        <textarea id="pasteyourcode_p">Paste Your SVG Path Code Here</textarea>
+        <button onclick="search_path(compile_path(pasteyourcode_p.value));inputarea.remove()">svg tag</button>
+    </div>
+    
     <div id="virtual"></div>
     <div id="rightbar">
         <svg id="svg" viewBox="0 0 1024 1024" height="400" width="400" style="border: solid black 1px">
@@ -17,6 +24,12 @@
     </div>
 </body>
 
+<script>
+    function compile_path(p) {
+        return `<svg><path d="${p}"></path></svg>`;
+    }
+</script>
+    
 <script src="js/parse.js"></script>
 <script src="js/meanings_sheet.js"></script>
 <script src="js/details.js"></script>
